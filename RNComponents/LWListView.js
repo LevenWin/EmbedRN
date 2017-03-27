@@ -6,7 +6,6 @@ import {AppRegistry,Text,Image,View,StyleSheet, TextInput, ScrollView,TouchableH
 import Dimensions from 'Dimensions';
 import PullRefreshScrollView from 'react-native-pullrefresh-scrollview';
 
-import TwoPage from './navi1'
 
 let SCREEN_WIDTH = Dimensions.get('window').width;
 let SCREENT_HEIGHT = Dimensions.get('window').height;
@@ -71,13 +70,13 @@ export default class LWListView extends Component {
         }
     }
     _cellClick(rowData,rowID){
-        next = {
-            component:TwoPage,
-            title: 'Two',
-            passProps:{myProp:'bar'}
-        };
-        console.log(rowData)
-        this.props.navigator.push(next)
+        // next = {
+        //     component:TwoPage,
+        //     title: 'Two',
+        //     passProps:{myProp:'bar'}
+        // };
+        // console.log(rowData)
+        // this.props.navigator.push(next)
     }
 
     _renderRow(rowData,sectionId,rowId){
@@ -164,3 +163,4 @@ styles = StyleSheet.create({
         margin: 10,
     },
 });
+AppRegistry.registerComponent('RNTest', () => LWListView);

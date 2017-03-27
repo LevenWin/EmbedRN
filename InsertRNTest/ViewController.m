@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import <RCTRootView.h>
 @interface ViewController ()
 
 @end
@@ -17,6 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.title = @"RNVC";
+}
+- (IBAction)btnClick:(id)sender {
+    NSURL *jsonCodeLocation = [NSURL URLWithString:@"http://localhost:8081/LWListView.bundle?platform=ios"];
+    RCTRootView *rootView = [[RCTRootView alloc]initWithBundleURL:jsonCodeLocation moduleName:@"RNTest" initialProperties:nil launchOptions:nil];
+    UIViewController *vc = [[UIViewController alloc]init];
+    vc.view = rootView;
+    vc.title = @"RN";
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 
