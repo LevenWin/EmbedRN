@@ -8,5 +8,6 @@
 4. 运行工程。
 ## 功能文件
 - LWListView.js
-![](https://www.github.com/LevenWin/EmbedRN/u)
+
+![](https://www.github.com/LevenWin/EmbedRN/raw/master/Untitled.gif)
 
